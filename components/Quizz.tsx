@@ -13,7 +13,7 @@ export default function Quizz() {
   const [input, setInput] = useState<string>("");
   const [letras, setLetras] = useState<string[]>([]);
   const [error, setError] = useState<string>("");
-  const { revealedPhrase, revealNextLetter, currentIndex } = useGame();
+  const { revealNextLetter } = useGame();
 
   const pista: Pista | undefined = pistas[step];
 
@@ -43,7 +43,10 @@ export default function Quizz() {
           💖 ¡Descubriste tu identidad secreta! 💖
         </h1>
         <p className="text-2xl">
-          Eres... <span className="font-bold italic text-violet-600">"Mi Princesa"</span>
+          Eres...{" "}
+          <span className="font-bold italic text-violet-600">
+            "Mi Princesa"
+          </span>
         </p>
         <TypingMessage />
       </div>
@@ -56,9 +59,13 @@ export default function Quizz() {
         className="bg-white rounded-xl shadow-xl p-6 max-w-xl text-center"
         onSubmit={(e) => e.preventDefault()}
       >
-        <h2 className="md:text-3xl text-2xl font-semibold mb-4">Pista {step} de 10</h2>
+        <h2 className="md:text-3xl text-2xl font-semibold mb-4">
+          Pista {step} de 10
+        </h2>
         <p className="mb-4 text-xl md:text-2xl font-semibold">{pista?.title}</p>
-        <p className="mb-4 text-xl text-violet-600">Eres <span className="font-bold">{letras.concat()}</span></p>
+        <p className="mb-4 text-xl text-violet-600">
+          Eres <span className="font-bold">{letras.concat()}</span>
+        </p>
         <Image
           src={"/arbol.png"}
           alt={"arbol magico"}

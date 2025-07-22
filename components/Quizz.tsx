@@ -45,7 +45,7 @@ export default function Quizz() {
         <p className="text-2xl">
           Eres...{" "}
           <span className="font-bold italic text-violet-600">
-            "Mi Princesa"
+            Mi Princesa
           </span>
         </p>
         <TypingMessage />

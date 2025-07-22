@@ -9,7 +9,7 @@ import { useGame } from "@/lib/useGame";
 import TypingMessage from "./TypingMessage";
 
 export default function Quizz() {
-  const [step, setStep] = useState<number>(11);
+  const [step, setStep] = useState<number>(1);
   const [input, setInput] = useState<string>("");
   const [letras, setLetras] = useState<string[]>([]);
   const [error, setError] = useState<string>("");
